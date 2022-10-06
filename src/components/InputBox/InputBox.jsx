@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const InputBox = ({ heading, btnText, subText }) => {
+const InputBox = ({ heading, btnText, subText, time }) => {
   const [inputState, setInputState] = useState(1);
 
   const decrement = () => {
@@ -35,9 +35,16 @@ const InputBox = ({ heading, btnText, subText }) => {
           </button>
         </div>
 
-        <div className="btn-primary-wrap">
-          <button className="btn-primary">{btnText}</button>
-        </div>
+        {time?.isRunning ? (
+          <div className="timer">
+            <div>{time.minutes} : </div>
+            <div> {time.seconds}</div>
+          </div>
+        ) : (
+          <div className="btn-primary-wrap">
+            <button className="btn-primary">{btnText}</button>
+          </div>
+        )}
 
         <div className="sub-text">{subText}</div>
       </div>

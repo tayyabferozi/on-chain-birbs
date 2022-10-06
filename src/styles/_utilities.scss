@@ -315,3 +315,16 @@ input[type="number"] {
 button {
   cursor: pointer;
 }
+
+.timer {
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+  gap: 6px;
+
+  * {
+    color: #fff;
+    font-weight: bold;
+    font-size: 24px;
+  }
+}

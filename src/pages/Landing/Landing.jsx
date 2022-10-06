@@ -1,10 +1,19 @@
 import React from "react";
+import { useTimer } from "react-timer-hook";
 
 import InputBox from "../../components/InputBox";
 import NFTBox from "../../components/NFTBox/NFTBox";
 import RightBoxes from "./RIghtBoxes/RightBoxes";
 
+const expiryTimestamp = new Date();
+// expiryTimestamp.setSeconds(expiryTimestamp.getSeconds() + 600);
+expiryTimestamp.setSeconds(expiryTimestamp.getSeconds() + 300);
+
 const Landing = () => {
+  const { seconds, minutes, hours, days, isRunning } = useTimer({
+    expiryTimestamp,
+    onExpire: () => console.warn("onExpire called"),
+  });
   return (
     <div className="page-section py-5">
       <div className="page-container">
@@ -34,6 +43,13 @@ const Landing = () => {
                     heading="PUBLIC"
                     btnText="Mint"
                     subText="32/1111 Minted"
+                    time={{
+                      seconds,
+                      minutes,
+                      hours,
+                      days,
+                      isRunning,
+                    }}
                   />
                 </div>
               </div>

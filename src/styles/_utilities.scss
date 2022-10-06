@@ -1,0 +1,317 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "Typeface Mario World Pixel Filled Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Typeface Mario World Pixel Filled Regular"),
+    url("../assets/fonts/TypefaceMarioWorldPixelFilledRegular-Yz84q.woff")
+      format("woff");
+}
+
+@font-face {
+  font-family: "Typeface Mario World Pixel Outline Regular";
+  font-style: normal;
+  font-weight: normal;
+  src: local("Typeface Mario World Pixel Outline Regular"),
+    url("../assets/fonts/TypefaceMarioWorldPixelOutlineRegular-K75rW.woff")
+      format("woff");
+}
+
+* {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: $color1;
+  font-size: 20px;
+}
+
+.page-section {
+  padding-left: 2rem;
+  padding-right: 2rem;
+
+  .page-container {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+h1,
+h2,
+h3,
+h4 {
+  &,
+  * {
+    font-family: "Typeface Mario World Pixel Filled Regular";
+  }
+}
+
+h1 {
+  position: relative;
+
+  &,
+  * {
+    font-size: 70px;
+
+    @media screen and (max-width: 1400px) {
+      font-size: 50px;
+    }
+
+    @media screen and (max-width: 1200px) {
+      font-size: 42px;
+    }
+
+    @media screen and (max-width: 767px) {
+      font-size: 32px;
+    }
+
+    @media screen and (max-width: 575px) {
+      font-size: 30px;
+    }
+
+    @media screen and (max-width: 436px) {
+      font-size: 26px;
+    }
+
+    @media screen and (max-width: 400px) {
+      font-size: 24px;
+    }
+
+    @media screen and (max-width: 374px) {
+      font-size: 20px;
+    }
+  }
+
+  &::after {
+    content: "ONCHAINBIRBS";
+    position: absolute;
+    text-shadow: 1px 2px #fff;
+    left: 0;
+    top: 0;
+    color: transparent;
+
+    @media screen and (max-width: 991px) {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+  }
+
+  & > div {
+    position: relative;
+    margin: 40px auto;
+    background: linear-gradient(to right, $color2, $color3);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    z-index: 1;
+  }
+}
+
+h2 {
+  font-size: 30px;
+
+  @media screen and (max-width: 575px) {
+    font-size: 26px;
+  }
+
+  @media screen and (max-width: 400px) {
+    font-size: 24px;
+  }
+
+  @media screen and (max-width: 374px) {
+    font-size: 20px;
+  }
+}
+
+h3 {
+  font-size: 20px;
+}
+
+.accordion {
+  margin-bottom: 20px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  * {
+    color: #fff;
+  }
+
+  .accordion-head {
+    padding: 16px;
+    text-align: center;
+    background: linear-gradient(to right, $color2, $color3);
+    cursor: pointer;
+  }
+
+  .accordion-body {
+    background-color: $color5;
+    padding: 30px 20px;
+    border: 1px solid $color3;
+    border-top: 0;
+    font-weight: 600;
+    line-height: 1.5;
+    border-radius: 0 0 10px 10px;
+  }
+}
+
+.nft-box {
+  background-color: $color5;
+  padding: 36px;
+  border: 1px solid $color3;
+  border-radius: 18px;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+}
+
+.input-box {
+  background-color: $color6;
+  padding: 30px;
+  border-radius: 18px;
+  text-align: center;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid $color2;
+
+  h2 {
+    color: #fff;
+    margin-bottom: 26px;
+  }
+
+  .chooser {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    .input-wrap {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -7px;
+        right: -7px;
+        height: 100%;
+        top: 7px;
+        background: linear-gradient(to right, $color2, $color3);
+        border-radius: 30px;
+        z-index: 0;
+      }
+
+      .input-main {
+        position: relative;
+        width: 100px;
+        height: 80px;
+        background-color: #fff;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 30px;
+        z-index: 1;
+
+        input {
+          width: 100%;
+          font-size: 20px;
+          text-align: center;
+          border: none;
+          font-family: "Typeface Mario World Pixel Filled Regular";
+          background: linear-gradient(to right, $color2, $color3);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+    }
+
+    .btn {
+      border-radius: 30px;
+      width: 45px;
+      height: 45px;
+      border: none;
+      font-size: 20px;
+      color: #fff;
+      font-family: "Typeface Mario World Pixel Filled Regular";
+
+      &.dec {
+        background-color: $color2;
+      }
+
+      &.inc {
+        background-color: $color3;
+      }
+    }
+  }
+
+  .sub-text {
+    color: #fff;
+    margin-top: 20px;
+    mix-blend-mode: soft-light;
+    font-size: 18px;
+  }
+}
+
+input {
+  outline: none;
+  font-weight: 600;
+}
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.btn-primary-wrap {
+  margin-top: 32px;
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 194px;
+    height: 50px;
+    top: 3px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    border-radius: 16px;
+  }
+
+  .btn-primary {
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+    background: linear-gradient(to right, $color2, $color3);
+    font-size: 20px;
+    color: #fff;
+    width: 188px;
+    height: 50px;
+    border-radius: 16px;
+    border: none;
+    font-size: 20px;
+    font-weight: 600;
+    transition: 0.4s ease;
+
+    &:hover {
+      transform: translate(0, 2px);
+    }
+  }
+}
+
+button {
+  cursor: pointer;
+}

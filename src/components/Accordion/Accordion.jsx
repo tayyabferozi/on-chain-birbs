@@ -13,13 +13,15 @@ const Accordion = ({ heading, defaultShow, children }) => {
       <h3 className="accordion-head" onClick={bodyToggleHandler}>
         {heading}
       </h3>
-      <div
-        className="accordion-body"
-        style={{ display: !defaultShow ? "none" : "block" }}
-        ref={bodyRef}
-      >
-        {children}
-      </div>
+      {children && (
+        <div
+          className="accordion-body"
+          style={{ display: !defaultShow ? "none" : "block" }}
+          ref={bodyRef}
+        >
+          {children}
+        </div>
+      )}
     </div>
   );
 };

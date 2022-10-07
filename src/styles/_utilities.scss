@@ -22,6 +22,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  text-decoration: none;
 }
 
 body {
@@ -166,6 +167,7 @@ h3 {
   img {
     display: block;
     width: 100%;
+    border-radius: 10px;
   }
 }
 
